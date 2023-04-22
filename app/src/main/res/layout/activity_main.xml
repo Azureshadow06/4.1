@@ -12,14 +12,13 @@
         android:id="@+id/textViewTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginBottom="21dp"
+        android:layout_marginBottom="22dp"
         android:fontFamily="sans-serif-black"
         android:text=""
         android:textColor="#FF6E40"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/editTextInsertTimeRest"
-        app:layout_constraintStart_toEndOf="@+id/button" />
+        app:layout_constraintEnd_toEndOf="@+id/button" />
 
     <TextView
         android:id="@+id/textViewTimerRest"
@@ -31,13 +30,13 @@
         android:textColor="#536DFE"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonRest" />
+        app:layout_constraintStart_toEndOf="@+id/button" />
 
     <EditText
         android:id="@+id/editTextInsertTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginTop="66dp"
         android:ems="10"
         android:fontFamily="sans-serif-black"
         android:hint="Please insert time(s)"
@@ -46,30 +45,18 @@
         android:textColorHint="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar"
-        app:layout_constraintStart_toStartOf="@+id/progressBar" />
+        app:layout_constraintStart_toStartOf="@+id/progressBar"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="25dp"
-        android:text="Start"
-        app:layout_constraintEnd_toStartOf="@+id/buttonReset"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
     <Button
         android:id="@+id/buttonReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="26dp"
+        android:layout_marginBottom="54dp"
         android:onClick="timerReset"
         android:text="Reset"
-        app:layout_constraintBottom_toTopOf="@+id/textViewTimer"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTimerRest"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button" />
 
@@ -80,7 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="13dp"
         android:progress="50"
-        app:layout_constraintBottom_toTopOf="@+id/buttonResetRest"
+        app:layout_constraintBottom_toTopOf="@+id/buttonReset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -102,22 +89,12 @@
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:layout_width="205dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="13dp"
+        android:layout_marginTop="40dp"
         android:progress="50"
-        app:layout_constraintBottom_toTopOf="@+id/buttonReset"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextInsertTime" />
 
-    <Button
-        android:id="@+id/buttonResetRest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="54dp"
-        android:onClick="timerResetRest"
-        android:text="Reset"
-        app:layout_constraintBottom_toTopOf="@+id/textViewTimerRest"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonRest" />
 
     <EditText
         android:id="@+id/editTextInsertTimeRest"
@@ -127,21 +104,21 @@
         android:ems="10"
         android:fontFamily="sans-serif-black"
         android:hint="Please insert time(s)"
-        android:textColorHint="#FFFFFF"
         android:inputType="number"
+        android:textColorHint="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/progressBarRest"
         app:layout_constraintStart_toStartOf="@+id/progressBarRest" />
 
     <Button
-        android:id="@+id/buttonRest"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:layout_marginTop="13dp"
         android:layout_marginEnd="23dp"
         android:text="Start"
-        app:layout_constraintEnd_toStartOf="@+id/buttonResetRest"
+        app:layout_constraintEnd_toStartOf="@+id/buttonReset"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBarRest" />
